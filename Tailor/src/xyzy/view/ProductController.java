@@ -151,20 +151,30 @@ public class ProductController {
 
     public void clickAddProduct(ActionEvent actionEvent) {
         System.out.println("Add product clicked");
-        String title = tProductTitle.getText();
-        String comment = tProductComment.getText();
-        String photo = filePhoto.getAbsolutePath();
-        Product product = new Product();
-        product.setTitle(title);
-        product.setComment(comment);
-        product.setPhoto(photo);
-        product.setFoto(new Image (filePhoto.toURI().toString()));
+        if (tProductTitle.getText() != null) {
+            Product product = new Product();
 
-        Product result = db.addProduct(product);
-        //db.addProduct(addProductTitle.getText(), filePhoto.getAbsolutePath());
+            String title = tProductTitle.getText();
+            String comment = tProductComment.getText();
 
-        if(result != null) {
-            oProductList.add(result);
+            product.setTitle(title);
+            product.setComment(comment);
+
+            if (filePhoto != null) {
+                String photo = filePhoto.getAbsolutePath();
+                product.setPhoto(photo);
+                product.setFoto(new Image (filePhoto.toURI().toString()));
+            }
+
+            Product result = db.addProduct(product);
+
+            if (result != null) {
+                oProductList.add(result);
+                System.out.println("Product is added to observable list");
+                tProductTitle.clear();
+                tProductComment.clear();
+                productPhoto.setImage(null);
+            }
         }
     }
 }

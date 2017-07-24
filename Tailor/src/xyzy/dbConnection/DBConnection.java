@@ -74,6 +74,12 @@ public class DBConnection {
     }
 
     public Product addProduct(Product product) {
+
+        System.out.println("Try to add product to DB");
+        if (product.getTitle().isEmpty()) {
+            return null;
+        }
+
         String sql = "INSERT INTO 'product' (title, comment, photo) VALUES (?, ?, ?)";
 
         FileInputStream fis = null;
@@ -82,26 +88,39 @@ public class DBConnection {
         try {
             connection.setAutoCommit(false);
             //File file = new File("src/xyzy/Belarus.png");
-            File file = new File(product.getPhoto());
-            fis = new FileInputStream(file);
+
             ps = connection.prepareStatement(sql);
 
-            //ps.setInt(1, 6);
             ps.setString(1, product.getTitle());
             ps.setString(2, product.getComment());
-            ps.setBinaryStream(3, fis, (int) file.length());
+            if (product.getPhoto() != null) {
+                File file = new File(product.getPhoto());
+                fis = new FileInputStream(file);
+                ps.setBinaryStream(3, fis, (int) file.length());
+            }
+
 
             ps.executeUpdate();
             connection.commit();
 
             System.out.println("Product is added");
+            sql = "SELECT id FROM product WHERE (title) = ? AND (comment) = ?";
+            ps = connection.prepareStatement(sql);
+            ps.setString(1, product.getTitle());
+            ps.setString(2, product.getComment());
+
             Product prd = new Product();
 
-            prd.setID(product.getID());
-            prd.setTitle(product.getTitle());
-            prd.setComment(product.getComment());
-            prd.setPhoto(product.getPhoto());
-            prd.setFoto(product.getFoto());
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                prd.setID(rs.getLong("id"));
+                prd.setTitle(product.getTitle());
+                prd.setComment(product.getComment());
+                if (product.getPhoto() != null) {
+                    prd.setPhoto(product.getPhoto());
+                    prd.setFoto(product.getFoto());
+                }
+            }
             return prd;
         } catch (FileNotFoundException e) {
             e.printStackTrace();
