@@ -8,25 +8,25 @@ import java.sql.Date;
  * Created by Yury on 017 17.07.17.
  */
 public class WriteOff {
-    private long ID;
-    private long idProduct;
+    private int ID;
+    private int idProduct;
     private int productSize;
     private int count;
-    private char cutter; // 2 типа основной и интернет закройщики
+    private String cutter; // 2 типа основной и интернет закройщики
     private Date date;
 
     private String productTitle;
     private Image productImage;
 
 
-    public void setID(long ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
     public long getID() {
         return ID;
     }
 
-    public void setIdProduct(long idProduct) {
+    public void setIdProduct(int idProduct) {
         this.idProduct = idProduct;
     }
     public long getIdProduct() {
@@ -47,10 +47,10 @@ public class WriteOff {
         return count;
     }
 
-    public void setCutter(char cutter) {
+    public void setCutter(String cutter) {
         this.cutter = cutter;
     }
-    public char getCutter() {
+    public String getCutter() {
         return cutter;
     }
 

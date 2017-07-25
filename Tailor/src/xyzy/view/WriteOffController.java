@@ -26,7 +26,10 @@ public class WriteOffController {
     public TableView<WriteOff> tWriteOff;
     public TableColumn<WriteOff, String> titleColumn;
     public TableColumn<WriteOff, Number> sizeColumn;
+    public TableColumn<WriteOff, String> cutterColumn;
+    public TableColumn<WriteOff, Number> countColumn;
     public ImageView iProductPhoto;
+
     // Ссылка на главное приложение.
     private MainApp mainApp;
     // коннектор к базе
@@ -49,7 +52,9 @@ public class WriteOffController {
     }
 
     public void initialize() {
+        System.out.println("Initialize of WriteOffController");
         ArrayList<WriteOff> listWriteOffs = db.selectWriteOffs();
+
         for (int i = 0; i < listWriteOffs.size(); i++) {
             oWriteOffList.add(listWriteOffs.get(i));
         }
@@ -58,7 +63,7 @@ public class WriteOffController {
         titleColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<WriteOff, String>, ObservableValue<String>>() {
             @Override
             public ObservableValue<String> call(TableColumn.CellDataFeatures<WriteOff, String> param) {
-                return new SimpleStringProperty(String.valueOf(param.getValue().getProductTitle()));
+                return new SimpleStringProperty(param.getValue().getProductTitle());
             }
         });
 
@@ -66,6 +71,20 @@ public class WriteOffController {
             @Override
             public ObservableValue<Number> call(TableColumn.CellDataFeatures<WriteOff, Number> param) {
                 return new SimpleIntegerProperty(param.getValue().getProductSize());
+            }
+        });
+
+        cutterColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<WriteOff, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<WriteOff, String> param) {
+                return new SimpleStringProperty(param.getValue().getCutter());
+            }
+        });
+
+        countColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<WriteOff, Number>, ObservableValue<Number>>() {
+            @Override
+            public ObservableValue<Number> call(TableColumn.CellDataFeatures<WriteOff, Number> param) {
+                return new SimpleIntegerProperty(param.getValue().getCount());
             }
         });
 

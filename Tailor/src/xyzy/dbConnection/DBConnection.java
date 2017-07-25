@@ -113,7 +113,7 @@ public class DBConnection {
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                prd.setID(rs.getLong("id"));
+                prd.setID(rs.getInt("id"));
                 prd.setTitle(product.getTitle());
                 prd.setComment(product.getComment());
                 if (product.getPhoto() != null) {
@@ -135,13 +135,16 @@ public class DBConnection {
         System.out.println("selectWriteOffs()");
         ArrayList<WriteOff> list = new ArrayList();
 
-        String sql = "SELECT 'writeOff'.id, 'writeOff'.product_size, 'product'.title, 'product'.photo FROM 'writeOff' JOIN 'product' ON 'writeOff'.id_product = 'product'.id";
+        String sql = "SELECT 'writeOff'.id, 'writeOff'.product_size, 'writeOff'.count, 'writeOff'.cutter," +
+                "'product'.title, 'product'.photo FROM 'writeOff' JOIN 'product' ON 'writeOff'.id_product = 'product'.id";
 
         try (ResultSet rs  = statement.executeQuery(sql)){
             while (rs.next()) {
                 WriteOff wrt = new WriteOff();
-                wrt.setID(rs.getLong("id"));
+                wrt.setID(rs.getInt("id"));
                 wrt.setProductSize(rs.getInt("product_size"));
+                wrt.setCount(rs.getInt("count"));
+                wrt.setCutter(rs.getString("cutter"));
                 wrt.setProductTitle(rs.getString("title"));
                 if (rs.getBinaryStream("photo") != null) {
                     wrt.setProductPhoto(new Image(rs.getBinaryStream("photo")));
@@ -166,7 +169,7 @@ public class DBConnection {
         try (ResultSet rs  = statement.executeQuery(sql)){
             while (rs.next()) {
                 Product product = new Product();
-                product.setID(rs.getLong("id"));
+                product.setID(rs.getInt("id"));
                 product.setTitle(rs.getString("title"));
                 product.setComment(rs.getString("comment"));
                 if (rs.getBinaryStream("photo") != null) {

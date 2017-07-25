@@ -8,13 +8,13 @@ import java.io.File;
  * Created by Yury on 021 21.07.17.
  */
 public class Product {
-    private long ID;
+    private int ID;
     private String title;
     private String comment;
     private String photo;
     private Image foto;
 
-    public void setID(long ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
     public long getID() {

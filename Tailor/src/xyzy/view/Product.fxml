@@ -12,7 +12,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="200.0" prefHeight="539.0" prefWidth="694.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyzy.view.ProductController">
    <left>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="133.0" prefWidth="114.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Название">
                <VBox.margin>
@@ -26,7 +26,7 @@
             </Label>
          </children>
          <BorderPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets bottom="20.0" left="20.0" right="10.0" top="20.0" />
          </BorderPane.margin>
       </VBox>
    </left>
@@ -55,21 +55,25 @@
       </VBox>
    </center>
    <right>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="120.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="139.0" prefWidth="161.0" BorderPane.alignment="CENTER">
          <children>
             <Button defaultButton="true" mnemonicParsing="false" onAction="#clickAddProduct" prefHeight="25.0" prefWidth="123.0" text="Добавить модель">
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </Button>
-            <ImageView fx:id="productPhoto" fitHeight="102.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
-               <VBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </VBox.margin>
-            </ImageView>
+            <VBox alignment="CENTER" prefHeight="128.0" prefWidth="161.0">
+               <children>
+                  <ImageView fx:id="productPhoto" fitHeight="110.0" fitWidth="160.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
          </children>
          <BorderPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets bottom="5.0" left="5.0" right="15.0" top="20.0" />
          </BorderPane.margin>
       </VBox>
    </right>

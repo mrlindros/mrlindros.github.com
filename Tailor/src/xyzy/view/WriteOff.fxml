@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
@@ -8,6 +9,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="444.0" prefWidth="740.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyzy.view.WriteOffController">
    <children>
@@ -17,8 +19,8 @@
                <children>
                   <TableView fx:id="tWriteOff" layoutX="-51.0" layoutY="49.0" prefHeight="391.0" prefWidth="248.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="titleColumn" prefWidth="75.0" text="Название" />
-                      <TableColumn fx:id="sizeColumn" prefWidth="75.0" text="Размер" />
+                      <TableColumn fx:id="titleColumn" prefWidth="101.0" text="Название" />
+                      <TableColumn fx:id="sizeColumn" prefWidth="71.0" text="Размер" />
                         <TableColumn fx:id="cutterColumn" prefWidth="75.0" text="Закройщик" />
                         <TableColumn fx:id="countColumn" prefWidth="75.0" text="Количество" />
                         <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Дата" />
@@ -39,7 +41,15 @@
                         <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="217.0" text="Удалить" />
                     </buttons>
                   </ButtonBar>
-                  <ImageView fx:id="iProductPhoto" fitHeight="262.0" fitWidth="200.0" layoutX="27.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="50.0" />
+                  <VBox alignment="CENTER" layoutX="14.0" layoutY="80.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
+                     <children>
+                        <ImageView fx:id="iProductPhoto" fitHeight="250.0" fitWidth="220.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                     </children>
+                  </VBox>
                </children>
             </AnchorPane>
         </items>
