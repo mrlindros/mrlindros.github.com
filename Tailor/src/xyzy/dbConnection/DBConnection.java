@@ -144,7 +144,7 @@ public class DBConnection {
                 wrt.setProductSize(rs.getInt("product_size"));
                 wrt.setProductTitle(rs.getString("title"));
                 if (rs.getBinaryStream("photo") != null) {
-                    wrt.setProductPhoto(new Image(rs.getBinaryStream("photo")));// rs.getBlob("photo"));
+                    wrt.setProductPhoto(new Image(rs.getBinaryStream("photo")));
                 }
                 //wrt.setDate(rs.getDate("date"));
 

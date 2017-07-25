@@ -93,6 +93,11 @@
     -fx-font-family: "Segoe UI Semibold";
 }
 
+.text-field.error {
+  -fx-text-box-border: red ;
+  -fx-focus-color: red ;
+}
+
 /*
  * Push Button в стиле Metro
  * Автор: Pedro Duque Vieira

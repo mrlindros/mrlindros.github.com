@@ -3,6 +3,7 @@ package xyzy.view;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -28,6 +29,7 @@ import java.io.FileNotFoundException;
 import java.sql.Blob;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by Yury on 021 21.07.17.
@@ -104,6 +106,24 @@ public class ProductController {
         // дополнительную информацию об адресате.
         tProduct.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showProductPhoto(newValue));
+
+        tProductTitle.textProperty().addListener((observable, oldValue, newValue) -> validate(tProductTitle));
+    }
+
+    private void validate(TextField tf) {
+        System.out.println("Validate");
+        ObservableList<String> styleClass = tf.getStyleClass();
+        if (tf.getText().trim().length()==0) {
+            System.out.println("Validate == 0");
+            if (! styleClass.contains("error")) {
+                System.out.println("Validate error");
+                styleClass.add("error");
+            }
+        } else {
+            // remove all occurrences:
+            System.out.println("Validate else");
+            styleClass.removeAll(Collections.singleton("error"));
+        }
     }
 
     /**
@@ -136,9 +156,10 @@ public class ProductController {
         fileChooser.setTitle("Open Resource File");
         fileChooser.getExtensionFilters().addAll(
                 //new FileChooser.ExtensionFilter("Text Files", "*.txt"),
-                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif", "*.ico"),
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif")
                 //new FileChooser.ExtensionFilter("Audio Files", "*.wav", "*.mp3", "*.aac"),
-                new FileChooser.ExtensionFilter("All Files", "*.*"));
+                //new FileChooser.ExtensionFilter("All Files", "*.*")
+                );
         dialogStage = new Stage();
         File selectedFile = fileChooser.showOpenDialog(dialogStage);
         if (selectedFile != null) {

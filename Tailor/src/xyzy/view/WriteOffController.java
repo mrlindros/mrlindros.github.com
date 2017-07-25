@@ -12,6 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.util.Callback;
 import xyzy.MainApp;
 import xyzy.dbConnection.DBConnection;
+import xyzy.model.Product;
 import xyzy.model.WriteOff;
 
 import java.io.InputStream;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
  */
 public class WriteOffController {
 
-    public TableView tWriteOff;
+    public TableView<WriteOff> tWriteOff;
     public TableColumn<WriteOff, String> titleColumn;
     public TableColumn<WriteOff, Number> sizeColumn;
     public ImageView iProductPhoto;
@@ -67,15 +68,21 @@ public class WriteOffController {
                 return new SimpleIntegerProperty(param.getValue().getProductSize());
             }
         });
-        tWriteOff.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue != null) {
-                //iProductPhoto.setImage(new Image(newValue.toString()));
-                iProductPhoto.setImage(new Image("file:src/xyzy/Belarus.png"));
-            }
-            else
-            {
-                iProductPhoto.setImage(null);
-            }
-        });
+
+        tWriteOff.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> showProductPhoto(newValue));
+    }
+
+    /**
+     * Отображает фото модели выбранного заказа.
+     * Если указанная модель = null, то поле imageView очищается.
+     *
+     * @param writeOff — тип WriteOff или null
+     */
+    private void showProductPhoto(WriteOff writeOff) {
+        System.out.println("Show Product Photo");
+        if (writeOff != null) {
+            iProductPhoto.setImage(writeOff.getProductImage());
+        }
     }
 }
