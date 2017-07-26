@@ -5,16 +5,25 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import xyzy.MainApp;
 import xyzy.dbConnection.DBConnection;
 import xyzy.model.Product;
 import xyzy.model.WriteOff;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
@@ -35,7 +44,11 @@ public class WriteOffController {
     // коннектор к базе
     private DBConnection db;
 
-    ObservableList oWriteOffList = FXCollections.observableArrayList();
+
+    private Stage primaryStage;
+
+
+    ObservableList<WriteOff> oWriteOffList = FXCollections.observableArrayList();
 
     public WriteOffController() {
         System.out.println("WriteOffController created");
@@ -58,6 +71,7 @@ public class WriteOffController {
         for (int i = 0; i < listWriteOffs.size(); i++) {
             oWriteOffList.add(listWriteOffs.get(i));
         }
+
         tWriteOff.setItems(oWriteOffList);
 
         titleColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<WriteOff, String>, ObservableValue<String>>() {
@@ -103,5 +117,95 @@ public class WriteOffController {
         if (writeOff != null) {
             iProductPhoto.setImage(writeOff.getProductImage());
         }
+    }
+
+    /**
+     * Вызывается, когда пользователь кликает по кнопке Добавить
+     * Открывает диалоговое окно с дополнительной информацией.
+     */
+    @FXML
+    private void clickAddNewWriteOff(ActionEvent actionEvent) throws IOException {
+
+        System.out.println("WriteOffController.clickAddNewWriteOff()");
+
+        try {
+            // Загружаем fxml-файл и создаём новую сцену
+            // для всплывающего диалогового окна.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/WriteOffEditDialog.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+
+            // Создаём диалоговое окно Stage.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Редактор списания модели");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Передаём выбранную транзакцию списания модели в контроллер.
+            WriteOffEditDialogController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            //controller.setWriteOff(writeOff);
+
+            // Отображаем диалоговое окно и ждём, пока пользователь его не закроет
+            dialogStage.showAndWait();
+            //return controller.isOkClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+            //return false;
+        }
+    }
+
+    /**
+     * Вызывается, когда пользователь кликает по кнопке Редактировать...
+     * Открывает диалоговое окно для изменения выбранной транзакции списания.
+     */
+    @FXML
+    private void clickEditWriteOff(ActionEvent actionEvent) {
+        System.out.println("clickEditWriteOff()");
+        WriteOff selectedWriteOff = tWriteOff.getSelectionModel().getSelectedItem();
+
+        if (selectedWriteOff == null) {
+            // Ничего не выбрано.
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.initOwner(mainApp.getPrimaryStage());
+            alert.setTitle("Ничего не выбрано");
+            alert.setHeaderText("Не выбрана транзакция");
+            alert.setContentText("Пожалуйста, выберите необходимую для редактирования запись");
+
+            alert.showAndWait();
+
+            return;
+        }
+
+        try {
+            // Загружаем fxml-файл и создаём новую сцену
+            // для всплывающего диалогового окна.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/WriteOffEditDialog.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+
+            // Создаём диалоговое окно Stage.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Редактор списания модели");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Передаём выбранную транзакцию списания модели в контроллер.
+            WriteOffEditDialogController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setWriteOff(selectedWriteOff);
+
+            // Отображаем диалоговое окно и ждём, пока пользователь его не закроет
+            dialogStage.showAndWait();
+            //return controller.isOkClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+            //return false;
+        }
+
     }
 }

@@ -19,7 +19,7 @@
                <children>
                   <TableView fx:id="tWriteOff" layoutX="-51.0" layoutY="49.0" prefHeight="391.0" prefWidth="248.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="titleColumn" prefWidth="101.0" text="Название" />
+                      <TableColumn fx:id="titleColumn" prefWidth="101.0" text="Модель" />
                       <TableColumn fx:id="sizeColumn" prefWidth="71.0" text="Размер" />
                         <TableColumn fx:id="cutterColumn" prefWidth="75.0" text="Закройщик" />
                         <TableColumn fx:id="countColumn" prefWidth="75.0" text="Количество" />
@@ -36,8 +36,8 @@
                   <Label layoutX="14.0" layoutY="14.0" prefHeight="62.0" prefWidth="379.0" styleClass="label-header" text="Подробнее" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="5.0" />
                   <ButtonBar layoutX="149.0" layoutY="244.0" prefHeight="40.0" prefWidth="279.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0">
                     <buttons>
-                      <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="94.0" text="Добавить" />
-                        <Button minWidth="74.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="125.0" text="Редактировать" />
+                      <Button mnemonicParsing="false" onAction="#clickAddNewWriteOff" prefHeight="33.0" prefWidth="94.0" text="Добавить" />
+                        <Button minWidth="74.0" mnemonicParsing="false" onAction="#clickEditWriteOff" prefHeight="33.0" prefWidth="125.0" text="Редактировать" />
                         <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="217.0" text="Удалить" />
                     </buttons>
                   </ButtonBar>

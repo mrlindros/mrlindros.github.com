@@ -1,17 +1,12 @@
 package xyzy;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import xyzy.view.ProductController;
 import xyzy.view.RootLayoutController;
 import xyzy.view.WriteOffController;
 
@@ -79,5 +74,13 @@ public class MainApp extends Application {
     public static void main(String[] args) {
         System.out.println("Start");
         launch(args);
+    }
+
+    /**
+     * Возвращает главную сцену.
+     * @return
+     */
+    public Stage getPrimaryStage() {
+        return primaryStage;
     }
 }

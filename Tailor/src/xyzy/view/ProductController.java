@@ -9,6 +9,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -127,6 +128,34 @@ public class ProductController {
     }
 
     /**
+     * Проверяет пользовательский ввод в текстовых полях.
+     *
+     * @return true, если пользовательский ввод корректен
+     */
+    private boolean isInputValid() {
+        String errorMessage = "";
+
+        if (tProductTitle.getText() == null || tProductTitle.getText().length() == 0) {
+            errorMessage += "Введите название модели\n";
+        }
+
+        if (errorMessage.length() == 0) {
+            return true;
+        } else {
+            // Показываем сообщение об ошибке.
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.initOwner(dialogStage);
+            alert.setTitle("Неверный ввод");
+            alert.setHeaderText("Пожалуйста, заполните необходимые поля");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+
+            return false;
+        }
+    }
+
+    /**
      * Отображает фото выбранной модели.
      * Если указанная модель = null, то поле imageView очищается.
      *
@@ -172,30 +201,33 @@ public class ProductController {
 
     public void clickAddProduct(ActionEvent actionEvent) {
         System.out.println("Add product clicked");
-        if (tProductTitle.getText() != null) {
-            Product product = new Product();
+        if (isInputValid()) {
+            if (tProductTitle.getText() != null) {
+                Product product = new Product();
 
-            String title = tProductTitle.getText();
-            String comment = tProductComment.getText();
+                String title = tProductTitle.getText();
+                String comment = tProductComment.getText();
 
-            product.setTitle(title);
-            product.setComment(comment);
+                product.setTitle(title);
+                product.setComment(comment);
 
-            if (filePhoto != null) {
-                String photo = filePhoto.getAbsolutePath();
-                product.setPhoto(photo);
-                product.setFoto(new Image (filePhoto.toURI().toString()));
+                if (filePhoto != null) {
+                    String photo = filePhoto.getAbsolutePath();
+                    product.setPhoto(photo);
+                    product.setFoto(new Image(filePhoto.toURI().toString()));
+                }
+
+                Product result = db.addProduct(product);
+
+                if (result != null) {
+                    oProductList.add(result);
+                    System.out.println("Product is added to observable list");
+                    tProductTitle.clear();
+                    tProductComment.clear();
+                    productPhoto.setImage(null);
+                }
             }
-
-            Product result = db.addProduct(product);
-
-            if (result != null) {
-                oProductList.add(result);
-                System.out.println("Product is added to observable list");
-                tProductTitle.clear();
-                tProductComment.clear();
-                productPhoto.setImage(null);
-            }
+            dialogStage.close();
         }
     }
 }
