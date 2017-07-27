@@ -64,14 +64,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainApp.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/xyzy/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+            <state relative-caret-position="276">
+              <caret line="48" column="47" lean-forward="true" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
               <folding>
-                <element signature="e#2432#2433#0" expanded="true" />
-                <element signature="e#2467#2468#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,65 +79,24 @@
       <file leaf-file-name="WriteOffController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/xyzy/view/WriteOffController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="97" column="52" lean-forward="false" selection-start-line="97" selection-start-column="52" selection-end-line="97" selection-end-column="52" />
+            <state relative-caret-position="327">
+              <caret line="105" column="13" lean-forward="true" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
               <folding>
-                <element signature="e#1777#1778#0" expanded="true" />
-                <element signature="e#1815#1816#0" expanded="true" />
-                <element signature="e#3600#3601#0" expanded="true" />
+                <element signature="e#1542#1543#0" expanded="true" />
+                <element signature="e#1578#1579#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WriteOffEditDialog.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WriteOffEditDialog.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/xyzy/view/WriteOffEditDialog.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="32" column="55" lean-forward="true" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WriteOffEditDialogController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/xyzy/view/WriteOffEditDialogController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="82" column="64" lean-forward="false" selection-start-line="82" selection-start-column="64" selection-end-line="82" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1846#1847#0" expanded="true" />
-                <element signature="e#1892#1893#0" expanded="true" />
-                <element signature="e#2393#2394#0" expanded="true" />
-                <element signature="e#2425#2426#0" expanded="true" />
-                <element signature="e#2565#2566#0" expanded="true" />
-                <element signature="e#2613#2614#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/xyzy/dbConnection/DBConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2567">
-              <caret line="162" column="39" lean-forward="false" selection-start-line="162" selection-start-column="39" selection-end-line="162" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DarkTheme.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/xyzy/view/DarkTheme.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="17" />
+            <state relative-caret-position="114">
+              <caret line="37" column="39" lean-forward="false" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -147,10 +105,34 @@
       <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/xyzy/view/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="77" column="8" lean-forward="false" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="62" />
+            <state relative-caret-position="204">
+              <caret line="223" column="37" lean-forward="true" selection-start-line="223" selection-start-column="37" selection-end-line="223" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RootLayoutController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/xyzy/view/RootLayoutController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-914">
+              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WriteOffEditDialogController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/xyzy/view/WriteOffEditDialogController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2393#2394#0" expanded="true" />
+                <element signature="e#2425#2426#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -159,14 +141,21 @@
       <file leaf-file-name="WriteOff.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/xyzy/model/WriteOff.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+            <state relative-caret-position="75">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
-                <element signature="e#798#799#0" expanded="true" />
-                <element signature="e#832#833#0" expanded="true" />
-                <element signature="e#1073#1074#0" expanded="true" />
                 <element signature="e#1102#1103#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DarkTheme.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/xyzy/view/DarkTheme.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="112" column="26" lean-forward="false" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -193,6 +182,7 @@
       <find>add</find>
       <find>res</find>
       <find>fx-text-fill</find>
+      <find>clickAddProduct</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -216,12 +206,12 @@
         <option value="$PROJECT_DIR$/src/xyzy/model/Product.java" />
         <option value="$PROJECT_DIR$/src/xyzy/dbConnection/DBConnection.java" />
         <option value="$PROJECT_DIR$/src/xyzy/model/WriteOff.java" />
-        <option value="$PROJECT_DIR$/src/xyzy/view/ProductController.java" />
-        <option value="$PROJECT_DIR$/src/xyzy/view/WriteOffController.java" />
-        <option value="$PROJECT_DIR$/src/xyzy/view/DarkTheme.css" />
-        <option value="$PROJECT_DIR$/src/xyzy/MainApp.java" />
-        <option value="$PROJECT_DIR$/src/xyzy/view/WriteOffEditDialogController.java" />
         <option value="$PROJECT_DIR$/src/xyzy/view/WriteOffEditDialog.fxml" />
+        <option value="$PROJECT_DIR$/src/xyzy/view/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/xyzy/view/DarkTheme.css" />
+        <option value="$PROJECT_DIR$/src/xyzy/view/WriteOffEditDialogController.java" />
+        <option value="$PROJECT_DIR$/src/xyzy/view/WriteOffController.java" />
+        <option value="$PROJECT_DIR$/src/xyzy/MainApp.java" />
       </list>
     </option>
   </component>
@@ -723,19 +713,43 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/xyzy/model/WriteOff.java</url>
-          <line>53</line>
+          <url>file://$PROJECT_DIR$/src/xyzy/view/ProductController.java</url>
+          <line>206</line>
           <properties />
-          <option name="timeStamp" value="79" />
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/xyzy/view/WriteOffEditDialogController.java</url>
-          <line>81</line>
+          <url>file://$PROJECT_DIR$/src/xyzy/view/ProductController.java</url>
+          <line>207</line>
           <properties />
-          <option name="timeStamp" value="80" />
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/xyzy/view/ProductController.java</url>
+          <line>136</line>
+          <properties />
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/xyzy/view/ProductController.java</url>
+          <line>139</line>
+          <properties />
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/xyzy/view/ProductController.java</url>
+          <line>143</line>
+          <properties />
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/xyzy/view/ProductController.java</url>
+          <line>145</line>
+          <properties />
+          <option name="timeStamp" value="86" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="81" />
+      <option name="time" value="87" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -744,42 +758,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/xyzy/model/WriteOff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/xyzy/dbConnection/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="29" lean-forward="true" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/xyzy/MainApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="e#2432#2433#0" expanded="true" />
-            <element signature="e#2467#2468#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../testfxprojectOrig/src/com/xshv/Controller/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/../testfxprojectOrig/src/com/xshv/DBConnection/DBConnection.java" />
     <entry file="file://$PROJECT_DIR$/src/xyzy/view/WriteOff.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -795,6 +773,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -813,9 +792,6 @@
         <state relative-caret-position="765">
           <caret line="71" column="16" lean-forward="false" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
           <folding>
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
             <element signature="e#1102#1103#0" expanded="true" />
           </folding>
         </state>
@@ -826,9 +802,8 @@
         <state relative-caret-position="1190">
           <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
           <folding>
-            <element signature="e#1777#1778#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-            <element signature="e#3600#3601#0" expanded="true" />
+            <element signature="e#1542#1543#0" expanded="true" />
+            <element signature="e#1578#1579#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -838,8 +813,7 @@
         <state relative-caret-position="901">
           <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
-            <element signature="e#2432#2433#0" expanded="true" />
-            <element signature="e#2467#2468#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -869,6 +843,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="45" column="35" lean-forward="true" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -887,9 +862,6 @@
         <state relative-caret-position="255">
           <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
             <element signature="e#1102#1103#0" expanded="true" />
           </folding>
         </state>
@@ -900,9 +872,8 @@
         <state relative-caret-position="527">
           <caret line="40" column="51" lean-forward="false" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
           <folding>
-            <element signature="e#1777#1778#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-            <element signature="e#3600#3601#0" expanded="true" />
+            <element signature="e#1542#1543#0" expanded="true" />
+            <element signature="e#1578#1579#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -912,8 +883,7 @@
         <state relative-caret-position="68">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#2432#2433#0" expanded="true" />
-            <element signature="e#2467#2468#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -984,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/stage/Stage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="476" column="62" lean-forward="true" selection-start-line="476" selection-start-column="62" selection-end-line="476" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/control/TableView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -1022,13 +985,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/xyzy/view/RootLayoutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1064,41 +1020,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/xyzy/view/ProductController.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/com/sun/javafx/event/EventHandlerManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="77" column="8" lean-forward="false" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/xyzy/view/DarkTheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="134">
+          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/xyzy/model/WriteOff.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="110">
+          <caret line="9059" column="0" lean-forward="false" selection-start-line="9059" selection-start-column="0" selection-end-line="9059" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/control/Control.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="871" column="0" lean-forward="false" selection-start-line="871" selection-start-column="0" selection-end-line="871" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/control/TableRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
           <folding>
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
+            <element signature="e#7937#7938#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/control/IndexedCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="120" column="50" lean-forward="true" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/control/TableCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2031">
-          <caret line="667" column="45" lean-forward="true" selection-start-line="667" selection-start-column="45" selection-end-line="667" selection-end-column="45" />
+        <state relative-caret-position="144">
+          <caret line="470" column="0" lean-forward="false" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,41 +1078,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/xyzy/MainApp.java">
+    <entry file="file://$PROJECT_DIR$/src/xyzy/view/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        <state relative-caret-position="204">
+          <caret line="223" column="37" lean-forward="true" selection-start-line="223" selection-start-column="37" selection-end-line="223" selection-end-column="37" />
           <folding>
-            <element signature="e#2432#2433#0" expanded="true" />
-            <element signature="e#2467#2468#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xyzy/view/DarkTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="112" column="26" lean-forward="false" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xyzy/model/WriteOff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="e#1102#1103#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/xyzy/view/WriteOffEditDialogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="64" lean-forward="false" selection-start-line="82" selection-start-column="64" selection-end-line="82" selection-end-column="64" />
+        <state relative-caret-position="191">
+          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1846#1847#0" expanded="true" />
-            <element signature="e#1892#1893#0" expanded="true" />
             <element signature="e#2393#2394#0" expanded="true" />
             <element signature="e#2425#2426#0" expanded="true" />
-            <element signature="e#2565#2566#0" expanded="true" />
-            <element signature="e#2613#2614#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/xyzy/view/WriteOffController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="97" column="52" lean-forward="false" selection-start-line="97" selection-start-column="52" selection-end-line="97" selection-end-column="52" />
-          <folding>
-            <element signature="e#1777#1778#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-            <element signature="e#3600#3601#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1154,9 +1123,49 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="32" column="55" lean-forward="true" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+        <state relative-caret-position="114">
+          <caret line="37" column="39" lean-forward="false" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/stage/Stage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="257" column="32" lean-forward="false" selection-start-line="257" selection-start-column="32" selection-end-line="257" selection-end-column="32" />
+          <folding>
+            <element signature="e#8302#8303#0" expanded="true" />
+            <element signature="e#8330#8331#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xyzy/view/RootLayoutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-914">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xyzy/view/WriteOffController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="105" column="13" lean-forward="true" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+          <folding>
+            <element signature="e#1542#1543#0" expanded="true" />
+            <element signature="e#1578#1579#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xyzy/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="48" column="47" lean-forward="true" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

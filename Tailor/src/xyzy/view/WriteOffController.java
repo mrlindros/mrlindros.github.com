@@ -50,6 +50,10 @@ public class WriteOffController {
 
     ObservableList<WriteOff> oWriteOffList = FXCollections.observableArrayList();
 
+    public ObservableList<WriteOff> getWriteOffList() {
+        return oWriteOffList;
+    }
+
     public WriteOffController() {
         System.out.println("WriteOffController created");
         db = new DBConnection();
@@ -104,6 +108,8 @@ public class WriteOffController {
 
         tWriteOff.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showProductPhoto(newValue));
+
+        tWriteOff.getSelectionModel().select(0);
     }
 
     /**
@@ -178,7 +184,13 @@ public class WriteOffController {
 
             return;
         }
-
+        else {
+            boolean okClicked = showWriteOffEditDialog(selectedWriteOff);
+            if (okClicked) {
+               // showPersonDetails(selectedPerson);
+            }
+        }
+/*
         try {
             // Загружаем fxml-файл и создаём новую сцену
             // для всплывающего диалогового окна.
@@ -205,6 +217,41 @@ public class WriteOffController {
         } catch (IOException e) {
             e.printStackTrace();
             //return false;
+        }
+*/
+    }
+
+    private boolean showWriteOffEditDialog(WriteOff writeOff)
+    {
+        System.out.println("showWriteOffEditDialog()");
+
+        try {
+            // Загружаем fxml-файл и создаём новую сцену
+            // для всплывающего диалогового окна.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/WriteOffEditDialog.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+
+            // Создаём диалоговое окно Stage.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Редактор списания модели");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Передаём выбранную транзакцию списания модели в контроллер.
+            WriteOffEditDialogController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setWriteOff(writeOff);
+            //controller.setListWriteOff(oWriteOffList);
+
+            // Отображаем диалоговое окно и ждём, пока пользователь его не закроет
+            dialogStage.showAndWait();
+            return controller.isOkClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
         }
 
     }

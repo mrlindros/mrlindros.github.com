@@ -133,6 +133,7 @@ public class ProductController {
      * @return true, если пользовательский ввод корректен
      */
     private boolean isInputValid() {
+        System.out.println("isInputValid()");
         String errorMessage = "";
 
         if (tProductTitle.getText() == null || tProductTitle.getText().length() == 0) {
@@ -197,6 +198,7 @@ public class ProductController {
             productPhoto.setImage(image);
             System.out.println("Photo has been selected!");
         }
+        //dialogStage.close();
     }
 
     public void clickAddProduct(ActionEvent actionEvent) {
@@ -227,7 +229,7 @@ public class ProductController {
                     productPhoto.setImage(null);
                 }
             }
-            dialogStage.close();
+            //dialogStage.close();
         }
     }
 }

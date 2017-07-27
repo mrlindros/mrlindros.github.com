@@ -31,9 +31,9 @@
             <Label text="Закройщик" GridPane.rowIndex="2" />
             <Label text="Количество" GridPane.rowIndex="3" />
             <Label text="Дата" GridPane.rowIndex="4" />
-            <ChoiceBox fx:id="modelTitleChoiceBox" prefHeight="31.0" prefWidth="411.0" style="-fx-background-color: #111111;" GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="modelTitleChoiceBox" prefHeight="31.0" prefWidth="411.0" GridPane.columnIndex="1" />
             <TextField fx:id="sizeField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ChoiceBox fx:id="cutterChoiceBox" prefHeight="31.0" prefWidth="414.0" style="-fx-background-color: #111111;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="cutterChoiceBox" prefHeight="31.0" prefWidth="414.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="countField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <DatePicker fx:id="dateWriteOffPicker" prefHeight="37.0" prefWidth="419.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>

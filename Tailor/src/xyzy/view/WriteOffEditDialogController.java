@@ -94,6 +94,15 @@ public class WriteOffEditDialogController {
     @FXML
     private void handleOk(ActionEvent actionEvent) {
         System.out.println("handleOk()");
+
+        writeOff.setProductTitle(modelTitleChoiceBox.getValue());
+        writeOff.setProductSize(Integer.parseInt(sizeField.getText()));
+        writeOff.setCutter(cutterChoiceBox.getValue());
+        writeOff.setCount(Integer.parseInt(countField.getText()));
+
+        //oWriteOffList.add(writeOff);
+        okClicked = true;
+        dialogStage.close();
     }
 
     /**

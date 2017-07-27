@@ -98,6 +98,21 @@
   -fx-focus-color: red ;
 }
 
+.choice-box {
+    -fx-background-color: white;
+}
+
+// Background color of the whole context menu
+.choice-box .context-menu {
+    -fx-background-color: white;
+}
+
+.choice-box .label {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: #000000;
+}
+
 /*
  * Push Button в стиле Metro
  * Автор: Pedro Duque Vieira

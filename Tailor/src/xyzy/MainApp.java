@@ -48,6 +48,7 @@ public class MainApp extends Application {
         // Даём контроллеру доступ к главному приложению
         RootLayoutController controller = loader.getController();
         controller.setMainApp(this);
+        primaryStage.setResizable(false);
 
         primaryStage.show();
     }
@@ -56,7 +57,7 @@ public class MainApp extends Application {
      * Показывает в корневом макете сведения о списании готовых продуктов.
      */
     public void showWriteOffs() throws IOException {
-        System.out.println("Show orders");
+        System.out.println("Show writeOffs");
 
         // Загружаем сведения о списании готовых продуктов
         FXMLLoader loader = new FXMLLoader();
