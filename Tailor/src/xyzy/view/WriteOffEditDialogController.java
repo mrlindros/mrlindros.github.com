@@ -56,8 +56,8 @@ public class WriteOffEditDialogController {
         }
         cutterChoiceBox.getItems().add("Основной");
         cutterChoiceBox.getItems().add("Интернет");
-        cutterChoiceBox.getItems().add("he");
-        cutterChoiceBox.getItems().add("she");
+        //cutterChoiceBox.getItems().add("he");
+        //cutterChoiceBox.getItems().add("she");
     }
 
     /**
@@ -75,6 +75,7 @@ public class WriteOffEditDialogController {
      * @param writeOff
      */
     public void setWriteOff(WriteOff writeOff) {
+
         this.writeOff = writeOff;
 
         modelTitleChoiceBox.setValue(writeOff.getProductTitle());
@@ -96,6 +97,12 @@ public class WriteOffEditDialogController {
         System.out.println("handleOk()");
 
         writeOff.setProductTitle(modelTitleChoiceBox.getValue());
+        for (int i = 0; i < listProducts.size(); i++) {
+            if (listProducts.get(i).getTitle() == modelTitleChoiceBox.getValue()) {
+                writeOff.setIdProduct(listProducts.get(i).getID());
+            }
+        }
+
         writeOff.setProductSize(Integer.parseInt(sizeField.getText()));
         writeOff.setCutter(cutterChoiceBox.getValue());
         writeOff.setCount(Integer.parseInt(countField.getText()));

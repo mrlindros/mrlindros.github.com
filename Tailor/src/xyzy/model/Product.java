@@ -17,7 +17,7 @@ public class Product {
     public void setID(int ID) {
         this.ID = ID;
     }
-    public long getID() {
+    public int getID() {
         return ID;
     }
 

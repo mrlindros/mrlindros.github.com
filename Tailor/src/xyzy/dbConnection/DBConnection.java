@@ -186,4 +186,54 @@ public class DBConnection {
 
         return list;
     }
+
+    public WriteOff addWriteOff(WriteOff writeOff) {
+        System.out.println("Try to add writeOff to DB");
+        if (writeOff.getProductTitle().isEmpty()) {
+            return null;
+        }
+
+        String sql = "INSERT INTO 'writeOff' (id_product, product_size, count, cutter) VALUES (?, ?, ?, ?)";
+        PreparedStatement ps = null;
+
+        try {
+            connection.setAutoCommit(false);
+
+            ps = connection.prepareStatement(sql);
+
+            ps.setInt(1, writeOff.getIdProduct());
+            ps.setInt(2, writeOff.getProductSize());
+            ps.setInt(3, writeOff.getCount());
+            ps.setString(4, writeOff.getCutter());
+            //ps.setDate(5, currentDate)
+
+            ps.executeUpdate();
+            connection.commit();
+
+            System.out.println("WriteOff is added");
+
+            sql = "SELECT id FROM writeOff WHERE (id_product) = ? AND (product_size) = ?";
+            ps = connection.prepareStatement(sql);
+            ps.setInt(1, writeOff.getIdProduct());
+            ps.setInt(2, writeOff.getProductSize());
+
+            WriteOff wrt = new WriteOff();
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                wrt.setID(rs.getInt("id"));
+                wrt.setIdProduct(writeOff.getIdProduct());
+                wrt.setProductSize(writeOff.getProductSize());
+                wrt.setCount(writeOff.getCount());
+                wrt.setCutter(writeOff.getCutter());
+
+            }
+            return wrt;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("WriteOff isn't added");
+        return null;
+    }
 }

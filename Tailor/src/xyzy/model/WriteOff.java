@@ -29,7 +29,7 @@ public class WriteOff {
     public void setIdProduct(int idProduct) {
         this.idProduct = idProduct;
     }
-    public long getIdProduct() {
+    public int getIdProduct() {
         return idProduct;
     }
 

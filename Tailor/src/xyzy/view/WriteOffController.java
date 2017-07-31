@@ -134,6 +134,25 @@ public class WriteOffController {
 
         System.out.println("WriteOffController.clickAddNewWriteOff()");
 
+        WriteOff tempWriteOff = new WriteOff();
+        boolean okClicked = showWriteOffEditDialog(tempWriteOff);
+        if (okClicked) {
+            //oWriteOffList.notify();
+            WriteOff result = db.addWriteOff(tempWriteOff);
+
+                if (result != null) {
+                    oWriteOffList.add(result);
+                    System.out.println("WriteOff is added to observable list");
+
+                    //tProductTitle.clear();
+                    //tProductComment.clear();
+                    //productPhoto.setImage(null);
+                    tWriteOff.getSelectionModel().select(result);
+                }
+            }
+
+        }
+/*
         try {
             // Загружаем fxml-файл и создаём новую сцену
             // для всплывающего диалогового окна.
@@ -152,7 +171,8 @@ public class WriteOffController {
             // Передаём выбранную транзакцию списания модели в контроллер.
             WriteOffEditDialogController controller = loader.getController();
             controller.setDialogStage(dialogStage);
-            //controller.setWriteOff(writeOff);
+            WriteOff writeOff = null;
+            controller.setWriteOff(writeOff);
 
             // Отображаем диалоговое окно и ждём, пока пользователь его не закроет
             dialogStage.showAndWait();
@@ -160,8 +180,8 @@ public class WriteOffController {
         } catch (IOException e) {
             e.printStackTrace();
             //return false;
-        }
-    }
+        }*/
+
 
     /**
      * Вызывается, когда пользователь кликает по кнопке Редактировать...
@@ -187,7 +207,11 @@ public class WriteOffController {
         else {
             boolean okClicked = showWriteOffEditDialog(selectedWriteOff);
             if (okClicked) {
-               // showPersonDetails(selectedPerson);
+                //oWriteOffList.notify();
+                //db.
+
+                oWriteOffList.add(selectedWriteOff);
+                tWriteOff.getSelectionModel().select(selectedWriteOff);
             }
         }
 /*
